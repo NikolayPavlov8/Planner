@@ -34,7 +34,7 @@ class TaskListController: UITableViewController {
 
     // сколько будет записей в каждой секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tmpData.count
+        return section + 1
     }
 
     // отображение данных в строке
@@ -46,6 +46,15 @@ class TaskListController: UITableViewController {
         return cell
     }
     
+    // название для каждой секции
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Секция " + String(section + 1)  // нумерация была с 1
+    }
+    
+    // высота каждой секции
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
 
     /*
     // Override to support conditional editing of the table view.

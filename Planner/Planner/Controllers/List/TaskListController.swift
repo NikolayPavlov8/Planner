@@ -11,7 +11,12 @@ import UIKit
 class TaskListController: UITableViewController {
     
     // временный массив для тестовых данных
-    private var tmpData = ["Строка 1", "Строка 2", "Строка 3", "Строка 4", "Строка 5", "Строка 6"]
+    private var taskList:[Task] = [
+        Task(name: "Задача 1", category: "Категория 1"),
+        Task(name: "Задача 2", category: "Категория 2"),
+        Task(name: "Задача 3", category: "Категория 3"),
+        Task(name: "Задача 4", category: "Категория 4")
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,32 +34,24 @@ class TaskListController: UITableViewController {
     
     // сколько секций нужно отображать в таблице
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 1
     }
 
     // сколько будет записей в каждой секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section + 1
+        return taskList.count
     }
 
     // отображение данных в строке
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
 
-        cell.textLabel?.text = tmpData[indexPath.row]  // это нужно, что бы получить значение из массива по индексу
+        cell.textLabel?.text = taskList[indexPath.row].name  // это нужно, что бы получить значение из массива по индексу и поле name
+        cell.detailTextLabel?.text = taskList[indexPath.row].category  // получить значение из массива по индексу и поле category
 
         return cell
     }
     
-    // название для каждой секции
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Секция " + String(section + 1)  // нумерация была с 1
-    }
-    
-    // высота каждой секции
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
 
     /*
     // Override to support conditional editing of the table view.

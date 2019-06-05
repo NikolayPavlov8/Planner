@@ -9,6 +9,9 @@
 import UIKit
 
 class TaskListController: UITableViewController {
+    
+    // временный массив для тестовых данных
+    private var tmpData = ["Строка 1", "Строка 2", "Строка 3", "Строка 4", "Строка 5", "Строка 6"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +29,19 @@ class TaskListController: UITableViewController {
     
     // сколько секций нужно отображать в таблице
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
 
     // сколько будет записей в каждой секции
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return tmpData.count
     }
 
     // отображение данных в строке
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
 
-        cell.textLabel?.text = "Строка"
+        cell.textLabel?.text = tmpData[indexPath.row]  // это нужно, что бы получить значение из массива по индексу
 
         return cell
     }

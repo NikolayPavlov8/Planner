@@ -13,6 +13,7 @@
 		318C12AB22A54A2A00951508 /* Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 318C12A922A54A2A00951508 /* Planner.xcdatamodeld */; };
 		318C12AD22A54A2B00951508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 318C12AC22A54A2B00951508 /* Assets.xcassets */; };
 		318C12B022A54A2B00951508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318C12AE22A54A2B00951508 /* LaunchScreen.storyboard */; };
+		31B22F6222A7CFCB002B31B3 /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B22F6122A7CFCB002B31B3 /* TaskListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		318C12AC22A54A2B00951508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		318C12AF22A54A2B00951508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		318C12B122A54A2B00951508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B22F6122A7CFCB002B31B3 /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		318C12A122A54A2A00951508 /* Planner */ = {
 			isa = PBXGroup;
 			children = (
+				31B22F6022A7CEAE002B31B3 /* Storyboards */,
+				31B22F5E22A7CE32002B31B3 /* Controllers */,
 				318C12A222A54A2A00951508 /* AppDelegate.swift */,
-				318C12A422A54A2A00951508 /* ViewController.swift */,
-				318C12A622A54A2A00951508 /* Main.storyboard */,
 				318C12AC22A54A2B00951508 /* Assets.xcassets */,
-				318C12AE22A54A2B00951508 /* LaunchScreen.storyboard */,
 				318C12B122A54A2B00951508 /* Info.plist */,
 				318C12A922A54A2A00951508 /* Planner.xcdatamodeld */,
 			);
 			path = Planner;
+			sourceTree = "<group>";
+		};
+		31B22F5E22A7CE32002B31B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				318C12A422A54A2A00951508 /* ViewController.swift */,
+				31B22F5F22A7CE60002B31B3 /* List */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		31B22F5F22A7CE60002B31B3 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				31B22F6122A7CFCB002B31B3 /* TaskListController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		31B22F6022A7CEAE002B31B3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				318C12A622A54A2A00951508 /* Main.storyboard */,
+				318C12AE22A54A2B00951508 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 			files = (
 				318C12A522A54A2A00951508 /* ViewController.swift in Sources */,
 				318C12A322A54A2A00951508 /* AppDelegate.swift in Sources */,
+				31B22F6222A7CFCB002B31B3 /* TaskListController.swift in Sources */,
 				318C12AB22A54A2A00951508 /* Planner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

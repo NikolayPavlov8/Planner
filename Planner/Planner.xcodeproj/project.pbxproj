@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310D268F22AA7468002625FA /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310D268E22AA7468002625FA /* TaskListCell.swift */; };
 		318C12A322A54A2A00951508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318C12A222A54A2A00951508 /* AppDelegate.swift */; };
 		318C12A522A54A2A00951508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318C12A422A54A2A00951508 /* ViewController.swift */; };
 		318C12A822A54A2A00951508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318C12A622A54A2A00951508 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310D268E22AA7468002625FA /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
 		318C129F22A54A2A00951508 /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		318C12A222A54A2A00951508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		318C12A422A54A2A00951508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310D268D22AA7417002625FA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				310D268E22AA7468002625FA /* TaskListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		318C129622A54A2A00951508 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		318C12A122A54A2A00951508 /* Planner */ = {
 			isa = PBXGroup;
 			children = (
+				310D268D22AA7417002625FA /* Cell */,
 				31B22F6322A7FF34002B31B3 /* Objects */,
 				31B22F6022A7CEAE002B31B3 /* Storyboards */,
 				31B22F5E22A7CE32002B31B3 /* Controllers */,
@@ -180,6 +191,7 @@
 				318C12A322A54A2A00951508 /* AppDelegate.swift in Sources */,
 				31B22F6522A7FF82002B31B3 /* Task.swift in Sources */,
 				31B22F6222A7CFCB002B31B3 /* TaskListController.swift in Sources */,
+				310D268F22AA7468002625FA /* TaskListCell.swift in Sources */,
 				318C12AB22A54A2A00951508 /* Planner.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

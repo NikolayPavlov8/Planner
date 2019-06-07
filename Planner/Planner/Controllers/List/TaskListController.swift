@@ -10,16 +10,21 @@ import UIKit
 
 class TaskListController: UITableViewController {
     
+    let dateFormatter = DateFormatter()
+    
     // временный массив для тестовых данных
     private var taskList:[Task] = [
         Task(name: "Задача 1", category: "Категория 1"),
         Task(name: "Задача 2", category: "Категория 2"),
-        Task(name: "Задача 3", category: "Категория 3"),
+        Task(name: "Задача 3", category: "Категория 3", deadline: Date()),
         Task(name: "Задача 4", category: "Категория 4")
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -42,7 +47,6 @@ class TaskListController: UITableViewController {
         return taskList.count
     }
     
-    let dateFormatter = DateFormatter()
 
     // отображение данных в строке
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +58,7 @@ class TaskListController: UITableViewController {
         
         // проверяем дату на пустоту
         if let deadline = task.deadline {
-            cell.detailTextLabel?.text = (task.category ?? "") + dateFormatter.string(from: deadline)
+            cell.detailTextLabel?.text = (task.category ?? "") + " " + dateFormatter.string(from: deadline)
         }else {
             cell.detailTextLabel?.text = (task.category ?? "")
         }

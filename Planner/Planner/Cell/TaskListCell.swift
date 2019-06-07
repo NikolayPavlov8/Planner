@@ -9,7 +9,12 @@
 import UIKit
 
 class TaskListCell: UITableViewCell {
-
+    
+    
+    @IBOutlet weak var labelTaskName: UILabel!
+    
+    @IBOutlet weak var labelTaskCategory: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

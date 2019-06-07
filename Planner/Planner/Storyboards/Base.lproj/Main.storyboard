@@ -42,6 +42,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="labelTaskCategory" destination="lmJ-kM-dHV" id="jQT-xY-11d"/>
+                                    <outlet property="labelTaskName" destination="UU4-a6-sYk" id="E7R-Eb-BVP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

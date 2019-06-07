@@ -41,13 +41,23 @@ class TaskListController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskList.count
     }
+    
+    let dateFormatter = DateFormatter()
 
     // отображение данных в строке
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "testCell", for: indexPath)
+        
+        let task = taskList[indexPath.row]
 
-        cell.textLabel?.text = taskList[indexPath.row].name  // это нужно, что бы получить значение из массива по индексу и поле name
-        cell.detailTextLabel?.text = taskList[indexPath.row].category  // получить значение из массива по индексу и поле category
+        cell.textLabel?.text = task.name + (task.priority ?? "")
+        
+        // проверяем дату на пустоту
+        if let deadline = task.deadline {
+            cell.detailTextLabel?.text = (task.category ?? "") + dateFormatter.string(from: deadline)
+        }else {
+            cell.detailTextLabel?.text = (task.category ?? "")
+        }
 
         return cell
     }

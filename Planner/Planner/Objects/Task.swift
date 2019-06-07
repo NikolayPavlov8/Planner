@@ -10,12 +10,24 @@ import Foundation
 
 class Task {
     
+    var name:String = "Задача"
+    var category:String?
+    var deadline:Date?
+    var priority:String?
+    
+    init(name:String, category:String, deadline:Date) {
+        self.name = name
+        self.category = category
+        self.deadline = deadline
+    }
+    
     init(name:String, category:String) {
         self.name = name
         self.category = category
     }
     
-    var name:String = "название 1"
-    var category:String = "категория 1"
+    init(name:String) {
+        self.name = name
+    }
     
 }
